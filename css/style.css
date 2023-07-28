@@ -25,8 +25,21 @@ main {
     width: 80vw;
     height: 80vh;
     margin: 10vh 8vw 10vh 12vw;
-    display: flex;
     gap: 1vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
 }
 
 .robotron {
@@ -59,24 +72,21 @@ main {
 }
 
 .box {
+    width: 200%;
     background: rgba(0,0,0,0.6);
     clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
     border-left: 5px solid var(--main-cinza);
-    height: 80%;
+    padding: 20% 30%;
 }
 
 /****************************** Equipamentos *****/
 
-.equipamentos {
-    flex-basis: 32%;
-}
-
 .montador {
-    height: 100%;;
+    height: 100%;
 }
 
 .montador-conteudo {
-    padding: 2em 10%;
+    padding: 10%;
 }
 
 .peca {
@@ -132,28 +142,29 @@ main {
 }
 
 .producao {
-    margin-top: 1em;
+    background: rgba(0,0,0,0.6);
+    color: var(--main-branco);
+    margin-left: 50%;
     font-size: 2em;
     text-transform: uppercase;
     padding: 0.2em 1em;
     float: right;
     border: 3px solid var(--main-branco);
-    background: var(--main-branco);
     clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
     cursor: pointer;
 }
 
 .producao:hover {
     background: var(--main-preto);
-    color: var(--main-branco)
 }
 
 
 
 /****************************** Estatísticas *****/
 .estatisticas {
-    flex-basis: 23%;
-    padding: 2em 2em 0;
+    padding: 1em 8em;
+    justify-content: space-between;
+    
 }
 
 .estatistica {
@@ -207,6 +218,30 @@ main {
     order: 1;
     flex-basis: 35%;
     margin: 10px 0 0;
+}
+
+.botoes {
+    display: flex;
+    justify-content: end;
+    gap: 1em;
+    flex-wrap: wrap;
+    padding: 5% 0 5% 20%;
+}
+
+.alterar {
+    background: rgba(0,0,0,0.6);
+    color: var(--main-branco);
+    font-weight: bold;
+    width: 190px;
+    height: 35px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    float: right;
+}
+
+.alterar:hover {
+    background: var(--main-preto);
 }
 
 @media screen and (max-width: 1600px) {
